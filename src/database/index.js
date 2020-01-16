@@ -12,7 +12,7 @@ const dbConnection = () => {
 		monitor.detach();
 		monitor.attach(initOptions, ["query", "error"]);
 	} else {
-		monitor.attach(initOptions, ["query", "error"]);
+		monitor.attach(initOptions, ["error"]);
 	}
 
 	return pgp({

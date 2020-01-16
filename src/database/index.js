@@ -1,6 +1,6 @@
-const promise = require("bluebird");
-const monitor = require("pg-monitor");
-const pgPromise = require("pg-promise");
+import promise from "bluebird";
+import monitor from "pg-monitor";
+import pgPromise from "pg-promise";
 
 const initOptions = { promiseLib: promise }; // Database options
 const pgp = pgPromise(initOptions); // initialize pg-promise w/options

@@ -24,4 +24,4 @@ const dbConnection = () => {
 	});
 };
 
-module.exports = dbConnection();
+export default dbConnection();

@@ -16,5 +16,7 @@ export default next => async (req, res) => {
 	const existingUser = await db.oneOrNone(findUserById, [id]);
 	if (!existingUser) return sendError(badCredentials, res);
 
+	req.user = existingUser;
+
 	next(req, res);
 };
